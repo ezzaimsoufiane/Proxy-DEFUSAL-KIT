@@ -10,13 +10,13 @@ After only one year in ENSIAS, just seeing "10.23.201.11:3128" make me want to t
 YES you do, now bookmark this so you wont anymore hehe !
 
 This is a collection of all the proxy commands i needed to get around the university's proxy !
-1. [Windows](https://github.com/ezzaimsoufiane/Proxy-DEFUSAL-KIT#windows)
-2. Debian
-3. FEDORA/CENTOS
-4. NPM
-5. GIT family
-6. Gradle
-7. DOCKER
+1. [Windows](#windows)
+2. [Debian](#Debian)
+3. [FEDORA/CENTOS](#FEDORA / CENTOS) 
+4. [NPM](#NPM)
+5. [GIT family](#GIT)
+6. [Gradle](#GRADLE)
+7. [DOCKER](#DOCKER)
 
 
 ## WINDOWS:
