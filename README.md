@@ -22,15 +22,50 @@ This is a collection of all the proxy commands i needed to get around the univer
 
 ## WINDOWS:
   * SETTING :
-  '''
+  ```
   set http_proxy=10.23.201.11:3128
   set https_proxy=10.23.201.11:3128
-  '''
+  ```
   * UNSETTING :
-  '''
+  ```
   set http_proxy=
   set https_proxy=
-  '''
+  ```
   * Check proxy status
-  'netsh winhttp show proxy'
+  `netsh winhttp show proxy`
 ## Debian :
+ * SETTING :
+``` 
+export {http,https,ftp}_proxy="10.23.201.11:3128"
+export {HTTP,HTTPS,FTP}_PROXY="10.23.201.11:3128"
+```
+ * UNSETTING :
+ ```
+ unset {http,https,ftp}_proxy
+ unset {HTTP,HTTPS,FTP}_PROXY
+ ```
+ * CHECK STATUS :
+ ```
+ echo $http_proxy
+ echo $https_proxy
+ ```
+ ## FEDORA / CENTOS :
+  * SETTING :
+  * UNSETTING :
+  * CHECK STATUS :
+ ## NPM / NODEJS :
+  * SETTING :
+  * UNSETTING :
+  * CHECK STATUS :
+ ## GIT :
+  * SETTING :
+  * UNSETTING :
+  * CHECK STATUS :
+ ## GRADLE :
+  * SETTING :
+  * UNSETTING :
+  * CHECK STATUS :
+ ## DOCKER :
+  * SETTING :
+  * UNSETTING :
+  * CHECK STATUS :
