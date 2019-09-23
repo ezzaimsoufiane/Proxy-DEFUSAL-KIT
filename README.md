@@ -10,7 +10,7 @@ After only one year in ENSIAS, just seeing "10.23.201.11:3128" make me want to t
 YES you do, now bookmark this so you wont anymore hehe !
 
 This is a collection of all the proxy commands i needed to get around the university's proxy !
-1. Windows
+1. [Windows](https://github.com/ezzaimsoufiane/Proxy-DEFUSAL-KIT#windows)
 2. Debian
 3. FEDORA/CENTOS
 4. NPM
