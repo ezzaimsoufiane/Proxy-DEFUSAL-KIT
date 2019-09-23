@@ -1,9 +1,8 @@
 # ENSIAS Proxy : TOUT-EN-UN
 
-After a year in ENSIAS, just seeing "10.23.201.11:3128" make me want to throw out.  
+We all can admit that the poxy is a pain in the 🍑 <br/>
+After only one year in ENSIAS, just seeing "10.23.201.11:3128" make me want to throw out.  
 
-
-We all can admit that the poxy is a pain in the 🍑 
 > Pardon my French
 
 ![YOU SUCK](https://i.imgur.com/wtw2lOR.jpg)
@@ -32,7 +31,9 @@ This is a collection of all the proxy commands i needed to get around the univer
   set https_proxy=
   ```
   * Check proxy status
-  `netsh winhttp show proxy`
+  ```
+  netsh winhttp show proxy
+  ```
 ## Debian :
  * SETTING :
 ``` 
