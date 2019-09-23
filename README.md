@@ -12,7 +12,7 @@ YES you do, now bookmark this so you wont anymore hehe !
 This is a collection of all the proxy commands i needed to get around the university's proxy !
 1. [Windows](#windows)
 2. [Debian](#debian-)
-3. [FEDORA/CENTOS](#fedora--centos-) 
+3. [FEDORA / CENTOS](#fedora--centos-) 
 4. [NPM](#npm--nodejs-)
 5. [GIT family](#git-)
 6. [Gradle](#gradle-)
