@@ -160,6 +160,5 @@ export GRADLE_OPTS=-Dhttp.proxyHost=http://10.23.201.11 -Dhttp.proxyPort=3128 -D
  * MISC:
  
  
- A very good read : 
- 
+ A very good read : <br/>
  https://elegantinfrastructure.com/docker/ultimate-guide-to-docker-http-proxy-configuration/
