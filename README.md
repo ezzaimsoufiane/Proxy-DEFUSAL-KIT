@@ -158,6 +158,8 @@ export GRADLE_OPTS=-Dhttp.proxyHost=http://10.23.201.11 -Dhttp.proxyPort=3128 -D
   systemctl docker restart
   ```
  * MISC:
+ 
+ 
  A very good read : 
  
  https://elegantinfrastructure.com/docker/ultimate-guide-to-docker-http-proxy-configuration/
