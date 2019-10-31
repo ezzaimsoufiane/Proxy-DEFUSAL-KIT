@@ -88,22 +88,6 @@ export {HTTP,HTTPS,FTP}_PROXY="http://10.23.201.11:3128"
   npm config set https-proxy http://10.23.201.11:3128 -g
   npm config set registry http://registry.npm.taobao.org -g
   ```
-  
-  Unfortunately, Node does not include a mechanism for global proxy settings. It seems that proxy information must be set on each call to http.request (the only solution i found)
-The `global-tunnel-ng` module on NPM appears to handle this:
-
-  ```javascript
-  var globalTunnel = require('global-tunnel-ng');
-
-globalTunnel.initialize({
-  host: '10.23.201.11',
-  port: 3128,
-  proxyAuth: 'userId:password', // optional 
-  sockets: 50 // pool size for each http and https
-});
-```
-After the global settings are establish with a call to `initialize`, both `http.request` and the `request` library will use the proxy information.
-Lemme know you solutions !
 
   * UNSETTING :
   ```
