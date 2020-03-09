@@ -90,7 +90,7 @@ export {HTTP,HTTPS,FTP}_PROXY="http://10.23.201.11:3128"
   cat /etc/yum.conf
   ```
    * USING sudo :
- First you need to export HTTP_PROXY then use the -E flag:
+First you need to export HTTP_PROXY then use the -E flag:
  ```
  -E, --preserve-env
              Indicates to the security policy that the user wishes to preserve their
