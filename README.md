@@ -51,6 +51,18 @@ export {HTTP,HTTPS,FTP}_PROXY="http://10.23.201.11:3128"
  echo $http_proxy
  echo $https_proxy
  ```
+ * USING sudo :
+ 
+ First you need to export HTTP_PROXY then use the -E flag:
+ ```
+ -E, --preserve-env
+             Indicates to the security policy that the user wishes to preserve their
+             existing environment variables.  The security policy may return an error
+             if the user does not have permission to preserve the environment.
+ ```
+ ```
+ sudo -E bash -c 'echo $HTTP_PROXY'
+ ```
  ## FEDORA / CENTOS :
   * SETTING :
   ```
@@ -78,6 +90,18 @@ export {HTTP,HTTPS,FTP}_PROXY="http://10.23.201.11:3128"
   echo $http_proxy
   cat /etc/yum.conf
   ```
+   * USING sudo :
+   
+First you need to export HTTP_PROXY then use the -E flag:
+ ```
+ -E, --preserve-env
+             Indicates to the security policy that the user wishes to preserve their
+             existing environment variables.  The security policy may return an error
+             if the user does not have permission to preserve the environment.
+ ```
+ ```
+ sudo -E bash -c 'echo $HTTP_PROXY'
+ ```
  ## NPM / NODEJS :
   * SETTING :
   
