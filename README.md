@@ -172,6 +172,9 @@ export GRADLE_OPTS=-Dhttp.proxyHost=http://10.23.201.11 -Dhttp.proxyPort=3128 -D
   ```
  * MISC:
  
+ A very good read : <br/>
+ https://elegantinfrastructure.com/docker/ultimate-guide-to-docker-http-proxy-configuration/
+ 
 ## APT: 
   * SETTING :
   ```
@@ -184,5 +187,4 @@ Acquire::https::proxy \"http://10.23.201.11:3128/\";" >> /etc/apt/apt.conf
   head -n -3 /etc/apt/apt.conf > tmp.conf  && mv tmp.conf  /etc/apt/apt.conf
   ```
   
- A very good read : <br/>
- https://elegantinfrastructure.com/docker/ultimate-guide-to-docker-http-proxy-configuration/
+ 
