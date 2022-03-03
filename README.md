@@ -180,11 +180,11 @@ export GRADLE_OPTS=-Dhttp.proxyHost=http://10.23.201.11 -Dhttp.proxyPort=3128 -D
   ```
   echo "Acquire::http::proxy  \"http://10.23.201.11:3128/\";
 Acquire::ftp::proxy \"http://10.23.201.11:3128/\";
-Acquire::https::proxy \"http://10.23.201.11:3128/\";" >> /etc/apt/apt.conf
+Acquire::https::proxy \"http://10.23.201.11:3128/\";" | sudo tee -a /etc/apt/apt.conf 
   ```
   * UNSETTING :
   ```
-  head -n -3 /etc/apt/apt.conf > tmp.conf  && mv tmp.conf  /etc/apt/apt.conf
+  head -n -3 /etc/apt/apt.conf > tmp.conf  && sudo mv tmp.conf  /etc/apt/apt.conf
   ```
   
  
