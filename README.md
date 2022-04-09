@@ -18,8 +18,8 @@ This is a collection of all the proxy commands i needed to get around it, contri
 5. [GIT family](#git-)
 6. [Gradle](#gradle-)
 7. [DOCKER](#docker-)
-8. [APT](#APT-)
-9. [SNAP](#SNAP-)
+8. [APT](#apt-)
+9. [SNAP](#snap-)
 
 
 ## WINDOWS:
