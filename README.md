@@ -196,7 +196,8 @@ Acquire::https::proxy \"http://10.23.201.11:3128/\";" | sudo tee -a /etc/apt/apt
   ```
   * UNSETTING :
   ```
-  TODO
+  sudo snap set system proxy.https=
+  sudo snap set system proxy.http=
   ```
   
  
