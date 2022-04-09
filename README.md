@@ -18,6 +18,8 @@ This is a collection of all the proxy commands i needed to get around it, contri
 5. [GIT family](#git-)
 6. [Gradle](#gradle-)
 7. [DOCKER](#docker-)
+8. [APT](#APT-)
+9. [SNAP](#SNAP-)
 
 
 ## WINDOWS:
@@ -186,7 +188,7 @@ Acquire::https::proxy \"http://10.23.201.11:3128/\";" | sudo tee -a /etc/apt/apt
   ```
   head -n -3 /etc/apt/apt.conf > tmp.conf  && sudo mv tmp.conf  /etc/apt/apt.conf
   ```
-## APT: 
+## SNAP: 
   * SETTING :
   ```
   sudo snap set system proxy.http="http://10.23.201.11:3128"
