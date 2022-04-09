@@ -186,5 +186,15 @@ Acquire::https::proxy \"http://10.23.201.11:3128/\";" | sudo tee -a /etc/apt/apt
   ```
   head -n -3 /etc/apt/apt.conf > tmp.conf  && sudo mv tmp.conf  /etc/apt/apt.conf
   ```
+## APT: 
+  * SETTING :
+  ```
+  sudo snap set system proxy.http="http://10.23.201.11:3128"
+  sudo snap set system proxy.https="http://10.23.201.11:3128"
+  ```
+  * UNSETTING :
+  ```
+  TODO
+  ```
   
  
