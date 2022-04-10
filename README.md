@@ -18,6 +18,8 @@ This is a collection of all the proxy commands i needed to get around it, contri
 5. [GIT family](#git-)
 6. [Gradle](#gradle-)
 7. [DOCKER](#docker-)
+8. [APT](#apt-)
+9. [SNAP](#snap-)
 
 
 ## WINDOWS:
@@ -175,7 +177,7 @@ export GRADLE_OPTS=-Dhttp.proxyHost=http://10.23.201.11 -Dhttp.proxyPort=3128 -D
  A very good read : <br/>
  https://elegantinfrastructure.com/docker/ultimate-guide-to-docker-http-proxy-configuration/
  
-## APT: 
+ ## APT: 
   * SETTING :
   ```
   echo "Acquire::http::proxy  \"http://10.23.201.11:3128/\";
@@ -185,6 +187,17 @@ Acquire::https::proxy \"http://10.23.201.11:3128/\";" | sudo tee -a /etc/apt/apt
   * UNSETTING :
   ```
   head -n -3 /etc/apt/apt.conf > tmp.conf  && sudo mv tmp.conf  /etc/apt/apt.conf
+  ```
+ ## SNAP: 
+  * SETTING :
+  ```
+  sudo snap set system proxy.http="http://10.23.201.11:3128"
+  sudo snap set system proxy.https="http://10.23.201.11:3128"
+  ```
+  * UNSETTING :
+  ```
+  sudo snap set system proxy.https=
+  sudo snap set system proxy.http=
   ```
   
  
