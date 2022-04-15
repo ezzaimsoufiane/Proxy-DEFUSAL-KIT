@@ -12,13 +12,13 @@ YES you do, now bookmark this so you wont anymore hehe !
 This is a collection of all the proxy commands i needed to get around it, contributions are very welcome to make this a reference.
 
 1. [Windows](#windows)
-2. [Debian](#debian-)
+2. [Debian (+ PIP)](#debian-)
 3. [FEDORA / CENTOS](#fedora--centos-) 
 4. [NPM](#npm--nodejs-)
 5. [GIT family](#git-)
 6. [Gradle](#gradle-)
 7. [DOCKER](#docker-)
-8. [APT](#apt-)
+7. [APT](#apt-)
 9. [SNAP](#snap-)
 
 
@@ -65,6 +65,8 @@ export {HTTP,HTTPS,FTP}_PROXY="http://10.23.201.11:3128"
  ```
  sudo -E bash -c 'echo $HTTP_PROXY'
  ```
+### PIP : 
+pip proxy is automatically set with the commands in this Debian section
  ## FEDORA / CENTOS :
   * SETTING :
   ```
@@ -177,7 +179,7 @@ export GRADLE_OPTS=-Dhttp.proxyHost=http://10.23.201.11 -Dhttp.proxyPort=3128 -D
  A very good read : <br/>
  https://elegantinfrastructure.com/docker/ultimate-guide-to-docker-http-proxy-configuration/
  
- ## APT: 
+ ## APT : 
   * SETTING :
   ```
   echo "Acquire::http::proxy  \"http://10.23.201.11:3128/\";
@@ -188,7 +190,7 @@ Acquire::https::proxy \"http://10.23.201.11:3128/\";" | sudo tee -a /etc/apt/apt
   ```
   head -n -3 /etc/apt/apt.conf > tmp.conf  && sudo mv tmp.conf  /etc/apt/apt.conf
   ```
- ## SNAP: 
+ ## SNAP : 
   * SETTING :
   ```
   sudo snap set system proxy.http="http://10.23.201.11:3128"
