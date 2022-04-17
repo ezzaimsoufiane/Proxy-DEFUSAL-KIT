@@ -157,14 +157,15 @@ export GRADLE_OPTS=-Dhttp.proxyHost=http://10.23.201.11 -Dhttp.proxyPort=3128 -D
   echo $GRADLE_OPTS
   ```
  ## DOCKER :
+ this is not working and needs to be updated
   * SETTING :
   ```
   sudo systemctl start docker
-  vi /etc/sysconfig/docker
+  sudo vi ~/.docker/config.json
   HTTP_PROXY="http://10.23.201.11:3128"
   HTTPS_PROXY="https://10.23.201.11:3128"
   systemctl daemon-reload
-  systemctl docker restart
+  systemctl restart docker
   ```
   * UNSETTING :
   ```
