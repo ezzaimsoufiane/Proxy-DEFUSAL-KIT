@@ -119,8 +119,8 @@ First you need to export HTTP_PROXY then use the -E flag:
 
   * UNSETTING :
   ```
-  npm config rm proxy
-  npm config rm https-proxy
+  npm config rm proxy -g
+  npm config rm https-proxy -g
   ```
   * CHECK STATUS :
   ```
