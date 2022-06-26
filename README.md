@@ -9,17 +9,36 @@ After only one year in ENSIAS, just seeing "10.23.201.11:3128" make me want to t
 
 YES you do, now bookmark this so you wont anymore hehe !
 
+<br/>
+Before You go through this document, you could use the script set.sh 
+to set :
+* Debian (system)
+* NPM
+* GIT
+* APT
+* SNAP
+by executing 
+```sh
+sudo ./set.sh
+```
+the unset.sh file will be available soon.
+
+
+
 This is a collection of all the proxy commands i needed to get around it, contributions are very welcome to make this a reference.
 
-1. [Windows](#windows)
-2. [Debian (+ PIP)](#debian-)
-3. [FEDORA / CENTOS](#fedora--centos-) 
-4. [NPM](#npm--nodejs-)
-5. [GIT family](#git-)
-6. [Gradle](#gradle-)
-7. [DOCKER](#docker-)
-7. [APT](#apt-)
-9. [SNAP](#snap-)
+- [ENSIAS Proxy : TOUT-EN-UN](#ensias-proxy--tout-en-un)
+  - [WINDOWS:](#windows)
+  - [Debian :](#debian-)
+    - [PIP :](#pip-)
+  - [FEDORA / CENTOS :](#fedora--centos-)
+  - [NPM / NODEJS :](#npm--nodejs-)
+  - [GIT :](#git-)
+  - [GRADLE :](#gradle-)
+  - [DOCKER :](#docker-)
+  - [APT :](#apt-)
+  - [SNAP :](#snap-)
+  - [Special Thanks](#special-thanks)
 
 
 ## WINDOWS:
@@ -202,5 +221,8 @@ Acquire::https::proxy \"http://10.23.201.11:3128/\";" | sudo tee -a /etc/apt/apt
   sudo snap set system proxy.https=
   sudo snap set system proxy.http=
   ```
+
+## Special Thanks
+I thank the original owner of this repository, and all the contributors.
   
  
