@@ -12,6 +12,7 @@ YES you do, now bookmark this so you wont anymore hehe !
 <br/>
 Before You go through this document, you could use the script set.sh 
 to set :
+
 * Debian (system)
 * NPM
 * GIT
@@ -21,7 +22,9 @@ by executing
 ```sh
 sudo ./set.sh
 ```
-the unset.sh file will be available soon.
+The unset.sh is used in the same way to undo changed done by ``set.sh``.
+<br/>
+<br/>
 
 
 
