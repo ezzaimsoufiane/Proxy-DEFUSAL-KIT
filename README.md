@@ -9,15 +9,39 @@ After only one year in ENSIAS, just seeing "10.23.201.11:3128" make me want to t
 
 YES you do, now bookmark this so you wont anymore hehe !
 
+<br/>
+Before You go through this document, you could use the script set.sh 
+to set :
+
+* Debian (system)
+* NPM
+* GIT
+* APT
+* SNAP
+by executing 
+```sh
+sudo ./set.sh
+```
+The unset.sh is used in the same way to undo changed done by ``set.sh``.
+<br/>
+<br/>
+
+
+
 This is a collection of all the proxy commands i needed to get around it, contributions are very welcome to make this a reference.
 
-1. [Windows](#windows)
-2. [Debian](#debian-)
-3. [FEDORA / CENTOS](#fedora--centos-) 
-4. [NPM](#npm--nodejs-)
-5. [GIT family](#git-)
-6. [Gradle](#gradle-)
-7. [DOCKER](#docker-)
+- [ENSIAS Proxy : TOUT-EN-UN](#ensias-proxy--tout-en-un)
+  - [WINDOWS:](#windows)
+  - [Debian :](#debian-)
+    - [PIP :](#pip-)
+  - [FEDORA / CENTOS :](#fedora--centos-)
+  - [NPM / NODEJS :](#npm--nodejs-)
+  - [GIT :](#git-)
+  - [GRADLE :](#gradle-)
+  - [DOCKER :](#docker-)
+  - [APT :](#apt-)
+  - [SNAP :](#snap-)
+  - [Special Thanks](#special-thanks)
 
 
 ## WINDOWS:
@@ -63,6 +87,8 @@ export {HTTP,HTTPS,FTP}_PROXY="http://10.23.201.11:3128"
  ```
  sudo -E bash -c 'echo $HTTP_PROXY'
  ```
+### PIP : 
+pip proxy is automatically set with the commands in this Debian section
  ## FEDORA / CENTOS :
   * SETTING :
   ```
@@ -115,8 +141,8 @@ First you need to export HTTP_PROXY then use the -E flag:
 
   * UNSETTING :
   ```
-  npm config rm proxy
-  npm config rm https-proxy
+  npm config rm proxy -g
+  npm config rm https-proxy -g
   ```
   * CHECK STATUS :
   ```
@@ -153,14 +179,15 @@ export GRADLE_OPTS=-Dhttp.proxyHost=http://10.23.201.11 -Dhttp.proxyPort=3128 -D
   echo $GRADLE_OPTS
   ```
  ## DOCKER :
+ this is not working and needs to be updated
   * SETTING :
   ```
   sudo systemctl start docker
-  vi /etc/sysconfig/docker
+  sudo vi ~/.docker/config.json
   HTTP_PROXY="http://10.23.201.11:3128"
   HTTPS_PROXY="https://10.23.201.11:3128"
   systemctl daemon-reload
-  systemctl docker restart
+  systemctl restart docker
   ```
   * UNSETTING :
   ```
@@ -172,6 +199,33 @@ export GRADLE_OPTS=-Dhttp.proxyHost=http://10.23.201.11 -Dhttp.proxyPort=3128 -D
   ```
  * MISC:
  
- 
  A very good read : <br/>
  https://elegantinfrastructure.com/docker/ultimate-guide-to-docker-http-proxy-configuration/
+ 
+ ## APT : 
+  * SETTING :
+  ```
+  echo "Acquire::http::proxy  \"http://10.23.201.11:3128/\";
+Acquire::ftp::proxy \"http://10.23.201.11:3128/\";
+Acquire::https::proxy \"http://10.23.201.11:3128/\";" | sudo tee -a /etc/apt/apt.conf 
+  ```
+  * UNSETTING :
+  ```
+  head -n -3 /etc/apt/apt.conf > tmp.conf  && sudo mv tmp.conf  /etc/apt/apt.conf
+  ```
+ ## SNAP : 
+  * SETTING :
+  ```
+  sudo snap set system proxy.http="http://10.23.201.11:3128"
+  sudo snap set system proxy.https="http://10.23.201.11:3128"
+  ```
+  * UNSETTING :
+  ```
+  sudo snap set system proxy.https=
+  sudo snap set system proxy.http=
+  ```
+
+## Special Thanks
+I thank the original owner of this repository, and all the contributors.
+  
+ 
